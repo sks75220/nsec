@@ -1246,7 +1246,7 @@ def parseCss(csstxt):
     rv.append(cssElt(tag, name, csstxt[openingBrace+1:closingBrace]))
     start = closingBrace + 1
 
-def process(inp, pretty=None, outp=None, joutf=None):
+def main(inp, pretty=None, outp=None, joutf=None):
   #parser = ET.HTMLParser()
 
   jtree = None
@@ -1348,6 +1348,6 @@ SpecificCol = args.spcol
 #   bit 1: if 1, use the old (number of digits) mechanism for detecting peaks
 #          if 0: whole cell of the number contributes towards peaks
 
-process(args.input, args.pretty, args.output, args.jsonoutput)
+main(args.input, args.pretty, args.output, args.jsonoutput)
 
 #
